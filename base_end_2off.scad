@@ -1,5 +1,7 @@
 include <wallace.scad>;
-
+// ratio for converting diameter to apothem
+da6 = 1 / cos(180 / 6) / 2;
+da8 = 1 / cos(180 / 8) / 2;
 difference() {
 	linear_extrude(height = end_height, convexity = 5) difference() {
 		square([yz_motor_distance + motor_casing - motor_screw_spacing + 10, motor_casing + rod_size * 4], center = true);

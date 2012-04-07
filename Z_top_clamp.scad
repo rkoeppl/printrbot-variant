@@ -1,4 +1,7 @@
 include <wallace.scad>;
+// ratio for converting diameter to apothem
+da6 = 1 / cos(180 / 6) / 2;
+da8 = 1 / cos(180 / 8) / 2;
 difference() {
 	union() {
 		linear_extrude(height = rod_size * 2 + gusset_size, convexity = 5) difference() {
