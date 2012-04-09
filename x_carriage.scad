@@ -1,6 +1,6 @@
 // Greg's Wade Extruder. 
 // It is licensed under the Creative Commons - GNU GPL license. 
-// © 2010 by GregFrost
+//  2010 by GregFrost
 // Extruder based on prusa git repo.
 // http://www.thingiverse.com/thing:6713
 
@@ -19,7 +19,7 @@ grrf_peek_mount_holes=32;
 
 
 //wade(hotend_mount=mendel_parts_v6_mount);
-union(){
+rotate ([0,-90,0]) {union(){
 difference() {
 	intersection() {
 	
@@ -87,6 +87,7 @@ translate ([8,38,55])rotate([0,0,0])
 cube([20,8,15]);
 translate ([8,38,0])rotate([0,0,0])
 cube([20,8,15]);
+}
 }
 //%import_stl("extruder-body.stl");
 
