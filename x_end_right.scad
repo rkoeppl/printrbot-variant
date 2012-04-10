@@ -7,7 +7,7 @@ m4_nut=7;
 // ratio for converting diameter to apothem
 da6 = 1 / cos(180 / 6) / 2;
 da8 = 1 / cos(180 / 8) / 2;
-difference() {
+mirror([  1, 0, 0]) difference() {
 	union() {
 
 
