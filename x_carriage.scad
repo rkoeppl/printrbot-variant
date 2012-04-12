@@ -64,28 +64,36 @@ difference() {
 	translate([-13,-(x_rod_spacing-bearing_size-15)/2 ]) {
 		cube([25, x_rod_spacing-bearing_size-10,x_carriage_width+2]);
 			}
-	//#for(side = [1, -1]) translate([-bearing_size / 2 - 4 - 14, 0, x_carriage_width / 2 + carriage_extruder_offset + side * 25]) rotate([90, 0, 0]) cylinder(r = 4.1, h = x_rod_spacing - 10, center = true, $fn = 6);
-
+	for(side = [1, -1]) translate([-bearing_size / 2 - 4 - 14, 0, x_carriage_width / 2 + carriage_extruder_offset + side * 25]) rotate([90, 0, 0]) cylinder(r = 4.1, h = x_rod_spacing - 10, center = true, $fn = 6);
+        translate([-20,-(x_rod_spacing+24)/2,28 ]) {
+		cube([65, x_rod_spacing-bearing_size-10,x_carriage_width]);
+			}
+	 translate([0,-(x_rod_spacing-36),0 ]) {
+		cube([50,5,100]);
+			}
+	translate([0,(x_rod_spacing-43),0 ]) {
+		cube([50,6,100]);
+			}
 }
-translate ([-bearing_size-23,10-x_rod_spacing/2-1,x_carriage_width/2+10])rotate([90,90,90])
+translate ([-bearing_size-23,10-x_rod_spacing/2-2,x_carriage_width/2+10])rotate([90,90,90])
 wade(hotend_mount= 4);
-translate ([-38.5,28,42])rotate([0,0,0])
-cube([30,20,28]);
-translate ([-38.5,-48,50])rotate([0,0,0])
-cube([30,20,20]);
+translate ([-38.5,28,41])rotate([0,0,0])
+cube([30,17,8]);
+translate ([-38.5,28,54])rotate([0,0,0])
+cube([30,17,16]);
 translate ([-38.5,-48,0])rotate([0,0,0])
-cube([30,20,28]);
-translate ([-38.5,28,0])rotate([0,0,0])
-cube([30,20,10]);
-translate ([8,38,20])rotate([0,0,0]){
+cube([30,18,28]);
+translate ([-38.5,28.5,0])rotate([0,0,0])
+cube([30,17,10]);
+translate ([8,40,20])rotate([0,0,0]){
 difference(){
 cube([20,8,30]);
 translate ([12,38,15])rotate([90,0,0])cylinder(r=m4_diameter/2,h=100,center=true,$fn=8);
 }
 }
-translate ([8,38,55])rotate([0,0,0])
+translate ([8,40,55])rotate([0,0,0])
 cube([20,8,15]);
-translate ([8,38,0])rotate([0,0,0])
+translate ([8,40,0])rotate([0,0,0])
 cube([20,8,15]);
 }
 }
