@@ -2,6 +2,9 @@ include <wallace.scad>;
 // ratio for converting diameter to apothem
 da6 = 1 / cos(180 / 6) / 2;
 da8 = 1 / cos(180 / 8) / 2;
+rotate([180,0,0]){
+union ()
+{
 difference() {
 	union() {
 		linear_extrude(height = rod_size * 2 + gusset_size, convexity = 5) difference() {
@@ -20,4 +23,7 @@ difference() {
 		%translate([rod_size, -10, rod_size * da6 * 2]) rotate([-90, 0, 0]) cylinder(r = rod_size * da6, h = 160, $fn = 6);
 		translate([0, -rod_size / 2, 0]) square([gusset_size + rod_size * 2 + 1, rod_size]);
 	}
+}
+translate ([3.5,4,-30])cube (size=[9,20,30],center=false);
+}
 }

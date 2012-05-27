@@ -77,7 +77,7 @@ difference() {
 }
 translate ([-bearing_size-23,10-x_rod_spacing/2-2,x_carriage_width/2+10])rotate([90,90,90])
 wade(hotend_mount= 4);
-translate ([-38.5,28,41])rotate([0,0,0])
+translate ([-38.5,28,43])rotate([0,0,0])
 cube([30,17,8]);
 translate ([-38.5,28,54])rotate([0,0,0])
 cube([30,17,16]);
@@ -144,8 +144,8 @@ filament_feed_hole_offset=filament_diameter+1.5;
 idler_nut_trap_depth=7.3;
 idler_nut_thickness=3.7;
 
-gear_separation=7.4444+32.0111 +0.25;
-
+//gear_separation=7.4444+32.0111 +0.25;
+gear_separation=42 +0.25;
 function motor_hole(hole)=
 [motor_mount_translation[0],motor_mount_translation[1]]+
 rotated(45+motor_mount_rotation+hole*90)*nema17_hole_spacing/sqrt(2);
